@@ -25,7 +25,7 @@ function App() {
             {isWorking ? 'off' : 'on'}
           </button>
           {isWorking &&
-            <Webcam videoConstraints={webCamConfig} />
+            <Webcam videoConstraints={webCamConfig} width={480} height={640} mirrored/>
           }
         </section>
       </main>
