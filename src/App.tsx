@@ -15,7 +15,7 @@ function App() {
     <>
       <main className='relative flex flex-col w-full h-screen text-green-300 bg-gray-900 justify-center items-center bg-gradient-to-tr from-purple-700 to-green-400'>
         {!isWorking&&
-          <h1 className='absolute top-2 text-lg text-gray-800 mt-3'>Включи, чтобы увидеть самого прекрасного человека!</h1>
+          <h1 className='absolute text-lg top-1 text-gray-800 mt-10 text-bold text-center mx-3'>Включи, чтобы увидеть самого прекрасного человека!</h1>
         }
         <section className={`relative w-96 min-h-[506px] max-h-[506px] my-auto border border-green-300 shadow-2xl rounded-xl p-2 ${sectionClass}`}>
           <button
