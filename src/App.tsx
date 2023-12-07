@@ -9,12 +9,10 @@ function App() {
     setIsWorking(!isWorking)
   }
 
-  const sectionClass = isWorking ? 'bg-gradient-to-tr from-green-400 to-purple-700' : 'bg-gray-800'
-
   return (
     <>
       <main className='relative flex flex-col w-full h-screen text-green-300 bg-gray-900 justify-center items-center bg-gradient-to-tr from-purple-700 to-green-400'>
-        <section className={`relative w-[380px] min-h-[380px] max-h-[380px] my-auto border border-green-300 shadow-2xl rounded-xl flex jusify-center items-center ${sectionClass}`}>
+        <section className={`relative w-[380px] min-h-[380px] max-h-[380px] my-auto border border-green-300 shadow-2xl rounded-xl flex jusify-center items-center bg-gray-800`}>
           <button
             className="bg-gray-700 p-2 m-2 rounded-xl absolute z-10 min-w-[48px] uppercase right-1 top-1"
             onClick={toggleCamera}
