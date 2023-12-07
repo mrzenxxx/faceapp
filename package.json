@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tensorflow-models/facemesh": "^0.0.5",
     "@tensorflow/tfjs": "^4.14.0",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
