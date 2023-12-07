@@ -1,5 +1,5 @@
 export const webCamConfig = {
-    width: 720,
-    height: 720,
+    width: 640,
+    height: 640,
     facingMode : 'user',
 }
