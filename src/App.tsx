@@ -1,13 +1,26 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Webcam from "react-webcam"
 import { webCamConfig } from "./webCamConfig"
 
 function App() {
   const [isWorking, setIsWorking] = useState(false)
+  const [isApproved, setIsApproved] = useState(false)
 
   const toggleCamera = () => {
     setIsWorking(!isWorking)
   }
+
+
+
+  useEffect(() => {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(() => setIsApproved(true))
+    } else {
+      setIsApproved(false)
+    }
+  }, [])
+
 
   return (
     <>
@@ -24,9 +37,11 @@ function App() {
               <Webcam
                 className="w-full h-full rounded-2xl"
                 videoConstraints={webCamConfig}
-                mirrored 
+                mirrored
               />
-              <h1 className='absolute text-xl bottom-5 text-gray-500 text-bold text-center mx-auto w-full uppercase animate-ping'>чушпан</h1>
+              {isApproved && 
+              <h1 className='absolute text-2xl bottom-5 text-gray-300 text-bold text-center mx-auto w-full uppercase animate-ping'>чушпан</h1>
+              }
             </>
           }
         </section>
